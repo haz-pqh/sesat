@@ -314,7 +314,7 @@
                       "RTM Perak": [4.592645014787043, 101.12359199087396],
                       "Jabatan Perdagangan (JP)": [4.591790140831118, 101.12301860961091],
                       "Jabatan Pengajian Am (JPA)": [4.591460595639705, 101.12289713424828],
-                      "Seni Bina": [4.590982363520566, 101.1225370119699],
+                      "Jabatan Kejuruteraan Awam (Senibina)": [4.590982363520566, 101.1225370119699],
                       "Jabatan Teknologi Maklumat & Komunikasi (JTMK)": [4.587163387985368, 101.12209617738102],
                       "Jabatan Kejuruteraan Elektrik (JKE)": [4.586504877977197, 101.12227730380059],
                       "Jab.Hal Ehwal Pelajar(JHEP) - Jab. Kej Awam (JKA)": [4.588117494270568, 101.1257468280471],
@@ -516,7 +516,7 @@
                       "RTM Perak": [4.592645014787043, 101.12359199087396],
                       "Jabatan Perdagangan (JP)": [4.591790140831118, 101.12301860961091],
                       "Jabatan Pengajian Am (JPA)": [4.591460595639705, 101.12289713424828],
-                      "Seni Bina": [4.590982363520566, 101.1225370119699],
+                      "Jabatan Kejuruteraan Awam (Senibina)": [4.590982363520566, 101.1225370119699],
                       "Jabatan Teknologi Maklumat & Komunikasi (JTMK)": [4.587163387985368, 101.12209617738102],
                       "Jabatan Kejuruteraan Elektrik (JKE)": [4.586504877977197, 101.12227730380059],
                       "Jab.Hal Ehwal Pelajar(JHEP) - Jab. Kej Awam (JKA)": [4.588117494270568, 101.1257468280471],
@@ -542,7 +542,8 @@
                       // "Masjid Sultan Azlan Shah": [4.589339243435599, 101.12680670427513],
                       "JMSK & JKM": [4.588175980712959, 101.1226628285621],
                       "Jabatan Matematik, Sains & Komputer (JMSK)": [4.588485652189044, 101.12452122455925],
-                      "Galeri PUO": [4.587363330718325, 101.12493599591237]
+                      "Galeri PUO": [4.587363330718325, 101.12493599591237],
+                      "Dataran Premier": [4.587845260053561, 101.12508969617211]
                       
                   };
 
@@ -769,6 +770,15 @@
                                   popupAnchor: [0, -32]
                             });
 
+                            
+                            var customIcon4 = L.divIcon({
+                                html: "<i class='bi bi-megaphone' style='font-size: 25px; color: black;'></i>", // Emoji as marker
+                                className: "custom-emoji-icon",
+                                  iconSize: [32, 32],
+                                  iconAnchor: [16, 32],
+                                  popupAnchor: [0, -32]
+                            });
+
                             // Add Parking Marker with emoji
 
                                 if(key === "Parcel"){
@@ -778,6 +788,11 @@
 
                                 }else if(key === "Galeri PUO"){
                                   var marker = L.marker(buildingsLatLng, { icon: customIcon3 })
+                                    .addTo(map)
+                                    .bindPopup('<div style="width: 30vh; height: fit-content; margin-top: 10px; text-align: center;"><img class="rounded" src="assets/img/'+key+'.jpg" style=" margin-top: 10px; width: 30vh; height: 24vh; filter: brightness(70%);"><h3 class="text-center" style="padding-top: 15px; width: 30vh;">'+key+'</h3>');
+
+                                }else if(key === "Dataran Premier"){
+                                  var marker = L.marker(buildingsLatLng, { icon: customIcon4 })
                                     .addTo(map)
                                     .bindPopup('<div style="width: 30vh; height: fit-content; margin-top: 10px; text-align: center;"><img class="rounded" src="assets/img/'+key+'.jpg" style=" margin-top: 10px; width: 30vh; height: 24vh; filter: brightness(70%);"><h3 class="text-center" style="padding-top: 15px; width: 30vh;">'+key+'</h3>');
 
