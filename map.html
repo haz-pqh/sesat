@@ -332,22 +332,22 @@
                       "Perpustakaan": [4.587550229435165, 101.12431460723296],
                       "Bengkel JKM": [4.588623229862702, 101.1231827540212],
                       "Bengkel JKA": [4.587966976456118, 101.1237542399432],
-                      "Dewan Kuliah JP": [4.591259780268736, 101.123184853441],
+                      "Bilik Kuliah JP": [4.591259780268736, 101.123184853441],
                       // "Dewan Kuliah JKM - JKA": [4.588877354940177, 101.12561957304284],
                       // "UTM": [4.588620157057096, 101.12465005794293],
                       "Anjung Premier": [4.5891055502401255, 101.12593872062399],
-                      // "Pusat Islam": [4.588574358477167, 101.12647386080877],
+                      "Pusat Islam": [4.588574358477167, 101.12647386080877],
                       "Masjid Sultan Azlan Shah": [4.589339243435599, 101.12680670427513],
                       "Surau": [4.5883842953541105, 101.12175847478376],
                       "JMSK & JKM": [4.588326260591703, 101.12264106582651],
                       "Unit Kenderaan": [4.5902788958563026, 101.12284376385684],
                       "Jabatan Matematik, Sains & Komputer (JMSK)": [4.588485652189044, 101.12452122455925],
-                      "Parking 5 petak": [4.588876503872699, 101.12615680339198],
-                      "Parking 9 petak": [4.5916566538448595, 101.12207983806434],
-                      "Parking 14 petak": [4.588721434415553, 101.12587383034196],
-                      "Parking 19 petak": [4.587797858127735, 101.12466508585919],
-                      "Parking 28 petak": [4.586903792382975, 101.12153657204615],
-                      "Parking 37 petak": [4.589040239658182, 101.12333896725326],
+                      // "Parking": [4.588876503872699, 101.12615680339198],
+                      // "Parking": [4.5916566538448595, 101.12207983806434],
+                      // "Parking": [4.588721434415553, 101.12587383034196],
+                      // "Parking": [4.587797858127735, 101.12466508585919],
+                      // "Parking": [4.586903792382975, 101.12153657204615],
+                      // "Parking": [4.589040239658182, 101.12333896725326],
                       "Galeri PUO": [4.587363330718325, 101.12493599591237],
                       "Surau (Kampus B)": [4.591837221676678, 101.12266931774695],
                       "Dataran Premier": [4.587845260053561, 101.12508969617211]  
@@ -413,7 +413,7 @@
                                   popupAnchor: [0, -32]
                               })
                           });
-                          if(targetBuilding === "Parking 5 petak" || targetBuilding === "Parking 9 petak" || targetBuilding === "Parking 14 petak" || targetBuilding === "Parking 19 petak" || targetBuilding === "Parking 28 petak" || targetBuilding === "Parking 37 petak" || targetBuilding === "Parking Bas" || targetBuilding === "Parcel" || targetBuilding === "Galeri PUO" || targetBuilding === "Dataran Premier"){
+                          if(targetBuilding === "Parking Bas" || targetBuilding === "Parcel" || targetBuilding === "Galeri PUO" || targetBuilding === "Dataran Premier" || targetBuilding === "Unit Kenderaan"){
                             marker.addTo(map).bindPopup('<div style="width: 30vh; height: fit-content; margin-top: 10px; text-align: center;"><img class="rounded" src="assets/img/'+targetBuilding+'.jpg" style=" margin-top: 10px; width: 30vh; height: 24vh; filter: brightness(70%);"><h3 class="text-center" style="padding-top: 15px; width: 30vh;">'+targetBuilding+'</h3>').openPopup();
                           }else{
                             marker.addTo(map).bindPopup('<div style="width: 30vh; height: 24vh; margin-top: 10px; text-align: center;"><img class="rounded" src="assets/img/'+targetBuilding+'.jpg" style=" margin-top: 10px; width: 30vh; height: 24vh; filter: brightness(70%);"><a href="'+targetBuilding+'.html" class="glightbox preview-link" style="width: 30vh; height: 24vh;"><i class="bi bi-zoom-in" style="position: absolute; left: 15.5vh; top: 13vh; z-index: 1; font-size: 5vh; color: white;"></i></a></div><h3 class="text-center" style="padding-top: 15px; width: 30vh;">'+targetBuilding+'</h3>').openPopup();
@@ -491,13 +491,31 @@
                   displayCoverageArea();
 
                   var parkingLocations = {
-                      "Unit Kenderaan": [4.5902788958563026, 101.12284376385684],
-                      "Parking 5 petak": [4.588876503872699, 101.12615680339198],
-                      "Parking 9 petak": [4.5916566538448595, 101.12207983806434],
-                      "Parking 14 petak": [4.588721434415553, 101.12587383034196],
-                      "Parking 19 petak": [4.587797858127735, 101.12466508585919],
-                      "Parking 28 petak": [4.586903792382975, 101.12153657204615],
-                      "Parking 37 petak": [4.589040239658182, 101.12333896725326]
+                      "Unit Kenderaan": [4.590220614946011, 101.12289872838737],
+                      "Parking 1": [4.588135397134642, 101.12633948574198],
+                      "Parking 2": [4.5880083933596865, 101.12591826071392],
+                      "Parking 3": [4.587284834864211, 101.12439780790166],
+                      "Parking 4": [4.588122679198939, 101.12528050467479],
+                      "Parking 5": [4.588087704912301, 101.12504446673323],
+                      "Parking 6": [4.588555354535432, 101.12573702061357],
+                      "Parking 7": [4.588183203676002, 101.12448305031114],
+                      "Parking 8": [4.587444844638765, 101.12353858173755],
+                      "Parking 9": [4.588395660573749, 101.12277221208603],
+                      "Parking 10": [4.587505405798068, 101.12315178662642],
+                      "Parking 11": [4.586780249937513, 101.12215872907936],
+                      "Parking 12": [4.587314352675828, 101.12226372063307],
+                      "Parking 13": [4.587083389378541, 101.12244112015485],
+                      "Parking 14": [4.58661063614465, 101.12160480810402],
+                      "Parking 15": [4.5888436666336, 101.12312893704619],
+                      "Parking 16": [4.591201771067213, 101.12168138333216],
+                      "Parking 17": [4.591393699584382, 101.123293188784],
+                      "Parking 18": [4.5911958560265465, 101.12349618017073],
+                      "Parking 19": [4.590289008585747, 101.12316130292038],
+                      "Parking 20": [4.5919270899475935, 101.1230438904674],
+                      "Parking 21": [4.592146390276865, 101.12227007433009],
+                      "Parking 22": [4.586918635801948, 101.12414627555266],
+                      "Parking 23": [4.58685188697791, 101.12392210023503],
+                      "Parking 24": [4.590336477556876, 101.12270745992024]
                   };
 
                   var buildings2 = {
@@ -535,7 +553,7 @@
                       "Perpustakaan": [4.587550229435165, 101.12431460723296],
                       "Bengkel JKM": [4.588623229862702, 101.1231827540212],
                       "Bengkel JKA": [4.587966976456118, 101.1237542399432],
-                      "Dewan Kuliah JP": [4.591259780268736, 101.123184853441],
+                      "Bilik Kuliah JP": [4.591259780268736, 101.123184853441],
                       // "Dewan Kuliah JKM - JKA": [4.588877354940177, 101.12561957304284],
                       // "UTM": [4.588620157057096, 101.12465005794293],
                       "Anjung Premier": [4.5891055502401255, 101.12593872062399],
@@ -550,7 +568,7 @@
 
                   
                   var mosques = {
-                      // "Pusat Islam": [4.588574358477167, 101.12647386080877],
+                      "Pusat Islam": [4.588574358477167, 101.12647386080877],
                       "Surau": [4.5883842953541105, 101.12175847478376],
                       "Masjid Sultan Azlan Shah": [4.589339243435599, 101.12680670427513],
                       "Surau (Kampus B)": [4.591837221676678, 101.12266931774695]                      
@@ -655,8 +673,18 @@
 
                             // Add Parking Marker with emoji
                             var marker = L.marker(parkingLatLng, { icon: customIcon })
-                                .addTo(map)
-                                .bindPopup('<div style="width: 30vh; height: 33vh; margin-top: 10px; text-align: center;"><img class="rounded" src="assets/img/'+key+'.jpg" style=" margin-top: 10px; width: 30vh; height: 24vh;"><h3 class="text-center" style="padding-top: 15px; width: 30vh;">'+key+'</h3></div>');
+                                .addTo(map);
+
+                                if(key === "Parking 1" || key === "Parking 2" || key === "Parking 3" || key === "Parking 4" || key === "Parking 5" || 
+                                key === "Parking 6" || key === "Parking 7" || key === "Parking 8" || key === "Parking 9" || key === "Parking 10" || 
+                                key === "Parking 11" || key === "Parking 12" || key === "Parking 13" || key === "Parking 14" || key === "Parking 15" || 
+                                key === "Parking 16" || key === "Parking 17" || key === "Parking 18" || key === "Parking 19" || key === "Parking 20" || 
+                                key === "Parking 21" || key === "Parking 22" || key === "Parking 23" || key === "Parking 24"
+                                ){
+                                  marker.bindPopup('<div style="width: 30vh; height: 33vh; margin-top: 10px; text-align: center;"><img class="rounded" src="assets/img/'+key+'.jpg" style=" margin-top: 10px; width: 30vh; height: 24vh;"><h3 class="text-center" style="padding-top: 15px; width: 30vh;">Parking</h3></div>');
+                                }else{
+                                  marker.bindPopup('<div style="width: 30vh; height: 33vh; margin-top: 10px; text-align: center;"><img class="rounded" src="assets/img/'+key+'.jpg" style=" margin-top: 10px; width: 30vh; height: 24vh;"><h3 class="text-center" style="padding-top: 15px; width: 30vh;">'+key+'</h3></div>');
+                                }
                             
                             markers[key] = marker;
 
