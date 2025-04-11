@@ -431,7 +431,7 @@
                               lineOptions: { styles: [{ color: 'blue', weight: 5 }] }, // Blue route
                               createMarker: function() { return null; }, // Hide default markers
                               router: L.Routing.osrmv1({ language: 'en', profile: 'foot' }),
-                              summaryTemplate: "<span style='font-size: 25px; font-weight: bold;'>From Gate A → " + targetBuilding + "</span>"
+                              summaryTemplate: "<span style='font-size: 25px; font-weight: bold; color: blue;'>From Gate A → </span><span style='font-size: 25px; font-weight: bold;'>" + targetBuilding + "</span>"
                           }).addTo(map);
 
                           // Route from Gate B (Color: Green) with custom title
@@ -444,7 +444,7 @@
                               lineOptions: { styles: [{ color: 'green', weight: 5 }] }, // Green route
                               createMarker: function() { return null; }, // Hide default markers
                               router: L.Routing.osrmv1({ language: 'en', profile: 'foot' }),
-                              summaryTemplate: "<span style='font-size: 25px; font-weight: bold;'>From Gate B → " + targetBuilding + "</span>"
+                              summaryTemplate: "<span style='font-size: 25px; font-weight: bold; color: green;'>From Gate B → </span><span style='font-size: 25px; font-weight: bold;'>" + targetBuilding + "</span>"
                           }).addTo(map);
                       } else {
                           // alert("Building not found! Try Library, Main Hall, Mechanical Block, or Administration Office.");
